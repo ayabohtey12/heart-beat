@@ -5,6 +5,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 import Layout from '../components/Layout';
 import ECGLine from '../components/ECGLine';
 import heartAsset from '../assets/clean-heart.png';
+import logo from '../assets/logo-white-1.webp';
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -22,13 +23,19 @@ const Welcome = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center"
+          className="flex justify-center relative mt-0 mb-8 sm:mb-12"
         >
-          <img 
-            src="/upssa-logo.png" 
-            alt="UPSSA Logo" 
-            className="h-20 w-auto brightness-125 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
-          />
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white rounded-3xl px-6 py-4 shadow-[0_0_30px_rgba(34,211,238,0.25)] flex items-center justify-center relative z-10 mx-4"
+          >
+            <img 
+              src={logo} 
+              alt="UPSSA Logo" 
+              className="h-16 sm:h-20 w-auto object-contain transition-all duration-500 ease-in-out"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Title & Subtitle Section */}
