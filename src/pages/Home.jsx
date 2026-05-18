@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Activity, Zap, HelpCircle, ChevronRight } from 'lucide-react';
+import { BookOpen, Activity, Zap, HelpCircle, ChevronRight, Cpu } from 'lucide-react';
 import Layout from '../components/Layout';
+import logo from '../assets/logo-white-1.webp';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -31,6 +32,14 @@ const Home = () => {
       color: "bg-ecg-red",
       shadow: "shadow-ecg-red/20",
       description: "Normal, Tachycardie, Bradycardie."
+    },
+    {
+      title: "Tutoriel Matériel ECG",
+      icon: Cpu,
+      path: "/tutorial",
+      color: "bg-medical-cyan",
+      shadow: "shadow-medical-cyan/20",
+      description: "Composants et matériel du projet."
     },
     {
       title: "Quiz ECG",
@@ -110,11 +119,17 @@ const Home = () => {
           transition={{ delay: 1 }}
           className="mt-12 text-center"
         >
-          <img 
-            src="/upssa-logo.png" 
-            alt="UPSSA Small" 
-            className="h-8 mx-auto opacity-30 grayscale mb-2"
-          />
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white rounded-2xl px-4 py-2 shadow-[0_0_30px_rgba(34,211,238,0.25)] inline-flex items-center justify-center relative mb-3"
+          >
+            <img 
+              src={logo} 
+              alt="UPSSA Small" 
+              className="h-8 mx-auto object-contain"
+            />
+          </motion.div>
           <p className="text-[10px] text-white/20 uppercase tracking-widest">
             Université Privée de la Santé et des Sciences d’Agadir
           </p>

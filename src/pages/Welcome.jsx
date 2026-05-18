@@ -51,7 +51,7 @@ const Welcome = () => {
             <div className="absolute right-0 top-0 bottom-0 w-2 border-r-2 border-t-2 border-b-2 border-medical-cyan/40 rounded-r-lg"></div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-[0.2em] uppercase whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-medical-cyan/50 drop-shadow-[0_0_15px_rgba(32,183,216,0.3)]">
-              HEART BEAT
+              CARDIO WAVE
             </h1>
             
             {/* Scanning light effect */}

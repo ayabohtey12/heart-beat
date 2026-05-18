@@ -9,6 +9,7 @@ import Definition from './pages/Definition';
 import Signal from './pages/Signal';
 import Rhythms from './pages/Rhythms';
 import Quiz from './pages/Quiz';
+import Tutorial from './pages/Tutorial';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signal" element={<Signal />} />
           <Route path="/rhythms" element={<Rhythms />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/tutorial" element={<Tutorial />} />
         </Routes>
       </AnimatePresence>
     </div>
